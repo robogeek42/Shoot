@@ -59,7 +59,7 @@ def load_sound(name):
     return sound
 
 tank_sound = load_sound("tank.wav")
-grenade_sound = load_sound("grenade.wav")
+#grenade_sound = load_sound("grenade.wav")
 
 # This is the main game loop
 # --------------------------
@@ -74,7 +74,7 @@ while done==False:
             (mx,my) = mouse
             if my < SHEIGHT-LOWERBORDER+20:
                 (lx,ly) = gun.launchpos
-                bullets.add(Bullet(screen, [SWIDTH/2 + lx - 50,SHEIGHT-105+ly],mouse, grenade_sound))
+                bullets.add(Bullet(screen, [SWIDTH/2 + lx - 50,SHEIGHT-105+ly],mouse, tank_sound))
                 tank_sound.play()
 
     #screen.fill(THECOLORS["black"])
